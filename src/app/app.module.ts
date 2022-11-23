@@ -8,6 +8,9 @@ import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { SkillsComponent } from './skills/skills.component';
 import { HeaderComponent } from './header/header.component';
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import { TranslateHttpLoader } from '@ngx-translate/http-loader'
+import {HttpClient} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,9 +23,20 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    /*TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    })*/
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function httpTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
