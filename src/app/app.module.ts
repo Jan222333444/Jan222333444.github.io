@@ -11,6 +11,9 @@ import { HeaderComponent } from './header/header.component';
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import {HttpClient} from "@angular/common/http";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import {HttpClient} from "@angular/common/http";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonToggleModule,
+    ReactiveFormsModule,
     /*TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

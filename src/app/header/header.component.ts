@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-header',
@@ -7,14 +8,7 @@ import {TranslateService} from "@ngx-translate/core";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  /*constructor(
-    public translate: TranslateService
-  ) {
-    translate.addLangs(['en', 'de']);
-    translate.setDefaultLang('en');
-  }
+  @Input() matButtonToggleGroup: FormControl<string | null> | undefined
 
-  switchLanguage(lang: string) {
-    this.translate.use(lang);
-  }*/
+
 }

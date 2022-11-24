@@ -1,5 +1,5 @@
-<!-- Jobs -->
-<div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
+<!-- Jobs ENGLISH-->
+<div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%" *ngIf="lang === 'en'">
   <div class="panel-heading">FLYERALARM GmbH</div>
   <div class="panel-body">
     <table>
@@ -29,8 +29,39 @@
 </div>
 
 
-<!-- Internships -->
-<div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
+<!-- Jobs GERMAN -->
+<div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%" *ngIf="lang === 'de'">
+  <div class="panel-heading">FLYERALARM GmbH</div>
+  <div class="panel-body">
+    <table>
+      <tbody>
+      <tr>
+        <td>
+          Dualer Student / Software Entwicklung
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Oktober 2019 - September 2022
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <li>Backend-Entwicklung hauptsächlich mit dem Framework PHP Slim und Node.js</li>
+            <li>Entwicklung von REST-APIs mit Datenbankverbindungen zu den Datenbankverwaltungssystemen MySQL und MongoDB</li>
+            <li>Erstellung von internen Webschnittstellen mit Vue.js und Angular</li>
+          </ul>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- Internships ENGLISH -->
+<div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%" *ngIf="lang === 'en'">
   <div class="panel-heading">Internships</div>
   <div class="panel-body">
     <div class="panel panel-default" style="">
@@ -64,3 +95,36 @@
 </div>
 
 
+<!-- Internships GERMAN-->
+<div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%" *ngIf="lang === 'de'">
+  <div class="panel-heading">Praktika</div>
+  <div class="panel-body">
+    <div class="panel panel-default" style="">
+      <div class="panel-heading">ERT Estenfeld</div>
+      <div class="panel-body">
+        <table>
+          <tbody>
+          <tr>
+            <td>
+              Praktikant IT und Software Entwicklung
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Juli 2017
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li>First-Level-Support </li>
+                <li>JavaScript-Entwicklung mit dem Framework mustache</li>
+              </ul>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

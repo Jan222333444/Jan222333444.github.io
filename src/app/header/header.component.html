@@ -1,14 +1,25 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+
+  <div class="container-fluid" *ngIf="matButtonToggleGroup?.value === 'en'">
     <div class="navbar-header">
-      <a routerLink="/" class="navbar-brand"> Jan Korb</a>
+      <a routerLink="/" [queryParams]="{lang: 'en'}" class="navbar-brand"> Jan Korb</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a routerLink="/">About Me</a></li>
-      <li><a routerLink="/experience">Experience</a></li>
-      <li><a routerLink="/education">Education</a></li>
-      <li><a routerLink="/skills">Skills</a></li>
+      <li><a routerLink="/" [queryParams]="{lang: 'en'}">About Me</a></li>
+      <li><a routerLink="/experience" [queryParams]="{lang: 'en'}">Experience</a></li>
+      <li><a routerLink="/education" [queryParams]="{lang: 'en'}">Education</a></li>
+      <li><a routerLink="/skills" [queryParams]="{lang: 'en'}">Skills</a></li>
     </ul>
   </div>
-</nav>
+
+  <div class="container-fluid" *ngIf="matButtonToggleGroup?.value === 'de'">
+    <div class="navbar-header">
+      <a routerLink="/" [queryParams]="{lang: 'de'}" class="navbar-brand"> Jan Korb</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a routerLink="/" [queryParams]="{lang: 'de'}">Über Mich</a></li>
+      <li><a routerLink="/experience" [queryParams]="{lang: 'de'}">Berufserfahrung</a></li>
+      <li><a routerLink="/education" [queryParams]="{lang: 'de'}">Bildung</a></li>
+      <li><a routerLink="/skills" [queryParams]="{lang: 'de'}">Fähigkeiten</a></li>
+    </ul>
+  </div>
 

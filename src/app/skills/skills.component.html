@@ -1,51 +1,108 @@
-<div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
-  <div class="panel-heading">Programming Languages</div>
-  <div class="panel-body">
-    <ul class="list-group">
-      <li class="list-group-item">PHP</li>
-      <li class="list-group-item">TypeScript</li>
-      <li class="list-group-item">Java</li>
-      <li class="list-group-item">Python</li>
-      <li class="list-group-item">JavaScript</li>
-    </ul>
+<div *ngIf="lang === 'en'">
+  <div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
+    <div class="panel-heading">Programming Languages</div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item">PHP</li>
+        <li class="list-group-item">TypeScript</li>
+        <li class="list-group-item">Java</li>
+        <li class="list-group-item">Python</li>
+        <li class="list-group-item">JavaScript</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
+    <div class="panel-heading">Markup Languages</div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item">HTML</li>
+        <li class="list-group-item">Markdown</li>
+        <li class="list-group-item">XML</li>
+        <li class="list-group-item">JSON</li>
+        <li class="list-group-item">LaTeX</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
+    <div class="panel-heading">Technologies</div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item">nginx</li>
+        <li class="list-group-item">node.js</li>
+        <li class="list-group-item">Docker</li>
+        <li class="list-group-item">ANTLR4</li>
+        <li class="list-group-item">MySQL</li>
+        <li class="list-group-item">MongoDB</li>
+        <li class="list-group-item">Angular</li>
+        <li class="list-group-item">vue.js</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
+    <div class="panel-heading">Languages</div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item">German - native speaker</li>
+        <li class="list-group-item">English - good knowledge</li>
+      </ul>
+    </div>
   </div>
 </div>
 
-<div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
-  <div class="panel-heading">Markup Languages</div>
-  <div class="panel-body">
-    <ul class="list-group">
-      <li class="list-group-item">HTML</li>
-      <li class="list-group-item">Markdown</li>
-      <li class="list-group-item">XML</li>
-      <li class="list-group-item">JSON</li>
-      <li class="list-group-item">LaTeX</li>
-    </ul>
-  </div>
-</div>
 
-<div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
-  <div class="panel-heading">Technologies</div>
-  <div class="panel-body">
-    <ul class="list-group">
-      <li class="list-group-item">nginx</li>
-      <li class="list-group-item">node.js</li>
-      <li class="list-group-item">Docker</li>
-      <li class="list-group-item">ANTLR4</li>
-      <li class="list-group-item">MySQL</li>
-      <li class="list-group-item">MongoDB</li>
-      <li class="list-group-item">Angular</li>
-      <li class="list-group-item">vue.js</li>
-    </ul>
+<div *ngIf="lang === 'de'">
+  <div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
+    <div class="panel-heading">Programmiersprachen</div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item">PHP</li>
+        <li class="list-group-item">TypeScript</li>
+        <li class="list-group-item">Java</li>
+        <li class="list-group-item">Python</li>
+        <li class="list-group-item">JavaScript</li>
+      </ul>
+    </div>
   </div>
-</div>
 
-<div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
-  <div class="panel-heading">Languages</div>
-  <div class="panel-body">
-    <ul class="list-group">
-      <li class="list-group-item">German - native speaker</li>
-      <li class="list-group-item">English - good knowledge </li>
-    </ul>
+  <div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
+    <div class="panel-heading">Markup Sprachen</div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item">HTML</li>
+        <li class="list-group-item">Markdown</li>
+        <li class="list-group-item">XML</li>
+        <li class="list-group-item">JSON</li>
+        <li class="list-group-item">LaTeX</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
+    <div class="panel-heading">Technologien</div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item">nginx</li>
+        <li class="list-group-item">node.js</li>
+        <li class="list-group-item">Docker</li>
+        <li class="list-group-item">ANTLR4</li>
+        <li class="list-group-item">MySQL</li>
+        <li class="list-group-item">MongoDB</li>
+        <li class="list-group-item">Angular</li>
+        <li class="list-group-item">vue.js</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
+    <div class="panel-heading">Sprachkenntnisse</div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item">Deutsch - Muttersprache</li>
+        <li class="list-group-item">English - gute Kenntnisse</li>
+      </ul>
+    </div>
   </div>
 </div>
