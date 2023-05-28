@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.message-field {
+  width: 90%;
+}
+
+.contact-form{
+  width: 90%;
+}

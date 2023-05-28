@@ -14,6 +14,10 @@ import {HttpClient} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {ReactiveFormsModule} from "@angular/forms";
+import { ContactComponent } from './contact/contact.component';
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {MatExpansionModule} from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
@@ -22,7 +26,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     ExperienceComponent,
     EducationComponent,
     SkillsComponent,
-    HeaderComponent
+    HeaderComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +35,9 @@ import {ReactiveFormsModule} from "@angular/forms";
     BrowserAnimationsModule,
     MatButtonToggleModule,
     ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatExpansionModule,
     /*TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
