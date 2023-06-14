@@ -8,7 +8,6 @@ import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { SkillsComponent } from './skills/skills.component';
 import { HeaderComponent } from './header/header.component';
-import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import { TranslateHttpLoader } from '@ngx-translate/http-loader'
 import {HttpClient} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,6 +17,8 @@ import { ContactComponent } from './contact/contact.component';
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {MatExpansionModule} from "@angular/material/expansion";
+import { DataProtectionComponent } from './data-protection/data-protection.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import {MatExpansionModule} from "@angular/material/expansion";
     EducationComponent,
     SkillsComponent,
     HeaderComponent,
-    ContactComponent
+    ContactComponent,
+    DataProtectionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

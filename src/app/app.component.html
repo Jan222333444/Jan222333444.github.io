@@ -1,12 +1,18 @@
-<header>
-  <nav class="navbar navbar-default">
-    <app-header [matButtonToggleGroup]="matButtonToggle"></app-header>
-    <mat-button-toggle-group #group="matButtonToggleGroup"  [formControl]="matButtonToggle" name="language" aria-label="Language"  appearance="standard">
-      <mat-button-toggle [value]="'de'" (click)="redir('de')">Deutsch</mat-button-toggle>
-      <mat-button-toggle [value]="'en'" (click)="redir('en')">English</mat-button-toggle>
-    </mat-button-toggle-group>
-  </nav>
-</header>
-<main>
-  <router-outlet></router-outlet>
-</main>
+<div id="wrapper">
+  <header id="header">
+    <nav class="navbar navbar-default">
+      <app-header [matButtonToggleGroup]="matButtonToggle"></app-header>
+      <mat-button-toggle-group #group="matButtonToggleGroup" [formControl]="matButtonToggle" name="language"
+                               aria-label="Language" appearance="standard">
+        <mat-button-toggle [value]="'de'" (click)="redir('de')">Deutsch</mat-button-toggle>
+        <mat-button-toggle [value]="'en'" (click)="redir('en')">English</mat-button-toggle>
+      </mat-button-toggle-group>
+    </nav>
+  </header>
+  <main id="content">
+    <router-outlet></router-outlet>
+  </main>
+  <footer id="footer">
+    <app-footer></app-footer>
+  </footer>
+</div>

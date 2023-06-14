@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {MatSelectModule} from "@angular/material/select";
-import {MatInputModule} from "@angular/material/input";
-import {MatFormFieldModule} from "@angular/material/form-field";
+import {ContactFormService} from "../contact-form.service";
+import {FormBuilder} from "@angular/forms";
+import {ContactForm} from "../models/contact-form";
 
 @Component({
   selector: 'app-contact',
@@ -13,8 +13,15 @@ export class ContactComponent implements OnInit{
 
   lang: string = 'en';
   email: string = 'info@jankorb.de'
+  contactForm = this.formBuilder.group({
+    email: '',
+    name: '',
+    message: ''
+  })
 
-  constructor(private route: ActivatedRoute, private router:Router) { }
+  //emailContact: FormControl
+
+  constructor(private route: ActivatedRoute, private router:Router, private contactService: ContactFormService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.route.queryParams
@@ -29,6 +36,11 @@ export class ContactComponent implements OnInit{
 
   redir(langNew: string | null | undefined){
     this.router.navigate(["/".concat(this.router.url.split('?')[0])], {queryParams:{lang: langNew}});
+  }
+
+  async onSubmit(){
+    console.warn(this.contactForm.value)
+    await this.contactService.saveContactForm(this.contactForm.value as ContactForm)
   }
 
 }

@@ -1,4 +1,4 @@
-<div class="panel panel-default" *ngIf="lang == 'en'">
+<div class="panel panel-default center-block" *ngIf="lang == 'en'">
   <div class="panel-heading">Contact</div>
   <div class="panel-body">
     <p>
@@ -13,9 +13,8 @@
         </mat-expansion-panel-header>
         <p>
           You can send me an email at <strong><a href="mailto:{{email}}">{{email}}</a></strong>. I will make every
-          effort to respond to your
-          message as soon as possible. Please provide a clear subject in the email so that I can quickly identify your
-          inquiry.
+          effort to respond to your message as soon as possible. Please provide a clear subject in the email so that I
+          can quickly identify your inquiry.
         </p>
       </mat-expansion-panel>
       <mat-expansion-panel>
@@ -46,20 +45,25 @@
   <div class="panel panel-default text-center" style="margin-top: 2.5%; margin-left: 18%; margin-right: 18%">
     <div class="panel-heading">Contact</div>
     <div class="panel-body">
-      <form>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <mat-form-field>
           <mat-label>Email</mat-label>
-          <input matInput required>
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>Name</mat-label>
-          <input matInput>
-        </mat-form-field>
-        <mat-form-field class="message-field">
-          <mat-label>Message</mat-label>
-          <textarea matInput required></textarea>
+          <input matInput formControlName="email" required>
         </mat-form-field>
         <br>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="message-field">
+          <mat-label>Message</mat-label>
+          <textarea matInput formControlName="message" required></textarea>
+        </mat-form-field>
+        <br>
+        <p>
+          <a routerLink="/data-protection" [queryParams]="{lang: 'de'}">Privacy policy</a>
+        </p>
         <button mat-flat-button color="primary" type="submit">Send</button>
       </form>
     </div>
@@ -119,10 +123,10 @@
   <div class="panel panel-default text-center" *ngIf="lang == 'de'">
     <div class="panel-heading">Kontakt-Formular</div>
     <div class="panel-body">
-      <form>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <mat-form-field>
           <mat-label>Email Adresse</mat-label>
-          <input matInput required>
+          <input matInput required type="text">
         </mat-form-field>
         <br>
         <mat-form-field>
@@ -135,6 +139,9 @@
           <textarea matInput required></textarea>
         </mat-form-field>
         <br>
+        <p>
+          <a routerLink="/data-protection" [queryParams]="{lang: 'de'}">Datenschutzerklärung</a>
+        </p>
         <button mat-flat-button color="primary" type="submit">Senden</button>
       </form>
     </div>
